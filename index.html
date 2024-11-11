@@ -1,11 +1,232 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" >
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8"> 
+    <title>Voyage en images - Fabien Moliné</title> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.cdnfonts.com/css/anamortee" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/icons/favicon.png">
+    <link href="https://fonts.googleapis.com/css2?family=Assistant&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+    <script src='https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js'></script>
 </head>
+
 <body>
-    <h1>Hello</h1>
+    <div class="header">
+        <img src="assets/logo.png" class="logo" alt="">
+        <div class="menu">
+            <ul>
+                <li>photos</li>
+                <li>videos</li>
+                <li>contact</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="links">
+        <a href="https://www.instagram.com/fabiomolinaviaja/" target="_blank" class=""><img src="assets/icons/Instagram.png" alt=""></a>
+        <a href="https://www.youtube.com/@fabienmoline4304" target="_blank" class=""><img src="assets/icons/Youtube.png" alt=""></a>
+        <a href="https://www.linkedin.com/in/fabienmoline/" target="_blank" class=""><img src="assets/icons/Linkedin.png" alt=""></a>
+    </div>
+
+    <div class="parallax">
+
+        <div class="ball"></div>
+        <div class="ball2"></div>
+
+        <div class="head">
+            <div class="landscape" id="landscape0"></div>
+            <div class="landscape" id="landscape2"></div>
+            <div class="landscape" id="landscape3"></div>
+            <div class="landscape" id="landscape1"></div>
+            <div class="scroll">
+                <span>Découvrez</span>
+                <img src="assets/icons/scroll.png" alt="">
+            </div>
+        </div>
+
+        <h1>Photos</h1>
+        <div id="filters" class="toolbar mb2 mt2">
+            <h3 class="btn fil-cat filter active" data-filter="all">Tout</h3>
+            <button class="btn fil-cat filter" data-rel="kenya" data-filter=".kenya">Kenya</button>
+            <button class="btn fil-cat filter" data-rel="indonesie" data-filter=".indonesie">Indonesie</button> 
+            <button class="btn fil-cat filter" data-rel="namibie" data-filter=".namibia">Namibie</button>
+            <button class="btn fil-cat filter" data-rel="norvege" data-filter=".norvege">Norvege</button> 
+            <button class="btn fil-cat filter" data-rel="afrique_du_sud" data-filter=".south-africa">Afrique du sud</button>
+        </div> 
+        
+        <div id="portfolio"> 
+            <div class="tile scale-anm namibia">
+                <img src="assets/min-images/namibie-pano-2.png" alt="" />
+            </div>
+            <div class="tile scale-anm namibia" >
+                <img src="assets/min-images/namibia-landscape-2.png" alt="" />
+            </div>
+            <div class="tile scale-anm namibia" >
+                <img src="assets/min-images/namibia-portrait-1.png" alt="" />
+            </div>
+            <div class="tile scale-anm kenya" >
+                <img src="assets/min-images/kenya-landscape-1.png" alt="" />
+            </div>
+            <div class="tile scale-anm south-africa" >
+                <img src="assets/min-images/south-africa-portrait-1.png" alt="" />
+            </div>
+            <div class="tile scale-anm namibia">
+                <img src="assets/min-images/namibie-pano-5.png" alt="" />
+            </div>
+            <div class="tile scale-anm kenya">
+                <img src="assets/min-images/kenya-portrait-1.png" alt="" />
+            </div>
+            <div class="tile scale-anm namibia" >
+                <img src="assets/min-images/namibie-pano-6.png" alt="" />
+            </div>
+            <div class="tile scale-anm kenya" >
+                <img src="assets/min-images/kenya-portrait-7.png" alt="" />
+            </div>
+            <div class="tile scale-anm kenya" style="margin-top: 55px;">
+                <img src="assets/min-images/kenya-portrait-6.png" alt="" />
+            </div>
+            <div class="tile scale-anm namibia" >
+                <img src="assets/min-images/namibia-portrait-5.png" alt="" />
+            </div>
+            <div class="tile scale-anm south-africa" >
+                <img src="assets/min-images/south-africa-landscape-2.png" alt="" />
+            </div>
+            <div class="tile scale-anm kenya" >
+                <img src="assets/min-images/kenya-portrait-3.png" alt="" />
+            </div>
+            <div class="tile scale-anm namibia" >
+                <img src="assets/min-images/namibie-pano-1.png" alt="" />
+            </div>
+            <div class="tile scale-anm kenya" >
+                <img src="assets/min-images/kenya-portrait-5.png" alt="" />
+            </div>
+            <div class="tile scale-anm namibia" >
+                <img src="assets/min-images/namibia-portrait-4.png" alt="" />
+            </div>
+            <div class="tile scale-anm south-africa" >
+                <img src="assets/min-images/south-africa-landscape-1.png" alt="" />
+            </div>
+            <div class="tile scale-anm kenya" >
+                <img src="assets/min-images/kenya-portrait-8.png" alt="" />
+            </div>
+            <div class="tile scale-anm namibia" >
+                <img src="assets/min-images/namibie-pano-4.png" alt="" />
+            </div>
+            <div class="tile scale-anm kenya" >
+                <img src="assets/min-images/kenya-portrait-4.png" alt="" />
+            </div>
+            <div class="tile scale-anm namibia" >
+                <img src="assets/min-images/namibia-landscape-1.png" alt="" />
+            </div>
+            <div class="tile scale-anm namibia" >
+                <img src="assets/min-images/namibia-portrait-2.png" alt="" />
+            </div>
+            <div class="tile scale-anm kenya" >
+                <img src="assets/min-images/kenya-portrait-2.png" alt="" />
+            </div>
+            <div class="tile scale-anm namibia" style="margin-top: 55px;">
+                <img src="assets/min-images/namibia-portrait-3.png" alt="" />
+            </div>
+            <div class="tile scale-anm namibia" >
+                <img src="assets/min-images/namibie-pano-3.png" alt="" />
+            </div>
+            <div class="tile scale-anm south-africa" >
+                <img src="assets/min-images/south-africa-portrait-2.png" alt="" />
+            </div>
+            <div class="tile scale-anm kenya" >
+                <img src="assets/min-images/kenya-pano-1.png" alt="" />
+            </div>
+            <div class="tile scale-anm south-africa" >
+                <img src="assets/min-images/south-africa-portrait-3.png" alt="" />
+            </div>
+            <div class="tile scale-anm namibia" >
+                <img src="assets/min-images/namibia-landscape-3.png" alt="" />
+            </div>
+            <div class="tile scale-anm kenya" >
+                <img src="assets/min-images/kenya-portrait-9.png" alt="" />
+            </div>
+        </div>
+
+        <h1>Vidéos</h1>
+        <div class="centered">
+            <!-- <img src="assets/test.png" style="width: 70vw"> -->
+            <div class="row">
+                <div class="col">
+                    <a href="https://youtu.be/AWIxg6xGEUw?si=RlbpfB4X3OrT2Xz6" target="_blank"><img class="link-video" src="assets/images/video-norway.png" alt=""></a>
+                </div>
+                <div class="col">
+                    <h2>La Norvège vue du ciel</h2>
+                    <p>En février 2022, je suis allé dans le nord de la Norvège pour y passer quelques semaines. J'ai navigué des îles Lofoten en allant jusqu'à la pointe nord. Les paysages sont magnifique et changent tous les jours. Il y a tellement de beauté dans l'Arctique, c'est sans nul doute l'une des destinations les plus magnifique au monde...</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h2>Safari en Afrique du Sud</h2>
+                    <p>Partez à l'aventure en Afrique du Sud avec un Self Drive Safari : liberté totale pour explorer la faune sauvage à votre rythme !!</p>
+                </div>
+                <div class="col">
+                    <a href="https://youtu.be/1zZWpqvgMg4?si=JX5rmuyw2i3w-nbM" target="_blank"><img class="link-video" src="assets/images/video-south-africa.png" alt=""></a>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <a href="https://youtu.be/iDIbrgYPLm0?si=g-XbJIRuly3p9bEV" target="_blank"><img class="link-video" src="assets/images/video-namibia.png" alt=""></a>
+                </div>
+                <div class="col">
+                    <h2>Roadtrip en Namibie</h2>
+                    <p>Voyageur solitaire ? En Namibie, ne manquez surtout pas le parc d’Etosha, avec son marais salant unique et ses rencontres animales inoubliables à l’aube et au crépuscule.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <h2>Safari au Kenya - Sony a6500 / Cinematic 4k</h2>
+                    <p>Pour ceux qui projetteraient de s'offrir des vacances en Afrique pour faire un Safari, le Kenya est l'un des plus beaux pays pour cela.</p>
+                </div>
+                <div class="col">
+                    <a href="https://youtu.be/fbcgYHYka0o?si=pbawCaj7qx5doLzE" target="_blank"><img class="link-video" src="assets/images/video-kenya.png" alt=""></a>
+                </div>
+            </div>
+    </div>
+
+    <h1>Contact</h1>
+    <div class="centered">
+        <div class="row" style="width: 50vw;">
+
+            <form action="https://api.web3forms.com/submit" method="POST" id="form">
+                <!-- <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+                <input type="hidden" name="subject" value="New Submission from Web3Forms" />
+                <input type="checkbox" name="botcheck" id="" style="display: none;" /> -->
+    
+                <div class="fields">
+                    <label for="name">Bonjour moi c’est</label>
+                    <input type="text" name="name" id="name" placeholder="Entre ton nom" required />
+                </div>
+                <div class="fields">
+                    <label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Pour me contacter, voici mon email</label>
+                    <input type="email" name="email" id="email" placeholder="exemple@email.com" required />
+                </div>
+                <div class="fields">
+                    <label for="message" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Je voulais échanger un peu</label>
+                    <textarea rows="5" name="message" id="message" placeholder="Dis moi tout !!" required></textarea>
+                </div>
+                <div class="button">
+                    <button type="submit">
+                        Envoyer
+                    </button>
+                </div>
+                <p id="result"></p>
+            </form>
+        </div>
+    </div>
+    </div>
+
+    <div style="clear:both;"></div>
+    <script  src="script.js"></script>
+
 </body>
 </html>
