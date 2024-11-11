@@ -20,9 +20,9 @@
         <img src="assets/logo.png" class="logo" alt="">
         <div class="menu">
             <ul>
-                <li>photos</li>
-                <li>videos</li>
-                <li>contact</li>
+                <li><a class="link_anchor" href="#photos">photos</a></li>
+                <li><a class="link_anchor" href="#videos">videos</a></li>
+                <li><a class="link_anchor" href="#contact">contact</a></li>
             </ul>
         </div>
     </div>
@@ -48,6 +48,8 @@
                 <img src="assets/icons/scroll.png" alt="">
             </div>
         </div>
+
+        <div id="photos"></div>
 
         <h1>Photos</h1>
         <div id="filters" class="toolbar mb2 mt2">
@@ -152,6 +154,8 @@
             </div>
         </div>
 
+        <div id="videos"></div>
+
         <h1>Vidéos</h1>
         <div class="centered">
             <!-- <img src="assets/test.png" style="width: 70vw"> -->
@@ -193,6 +197,8 @@
             </div>
     </div>
 
+    <div id="contact"></div>
+
     <h1>Contact</h1>
     <div class="centered">
         <div class="row" style="width: 90vw; max-width: 1200px; margin-bottom: 150px;">
@@ -208,7 +214,7 @@
                     <div class="fields">
                         <label for="name">Bonjour, moi c’est</label>
                         <input type="text" name="name" id="name" placeholder="Entrez votre nom" required />
-                    </div> 
+                    </div>
                     <div class="fields">
                         <label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Pour me contacter, voici mon email</label>
                         <input type="email" name="email" id="email" placeholder="exemple@email.com" required />

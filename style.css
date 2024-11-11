@@ -21,6 +21,10 @@
         font-size: 20px;
     }
 
+    a {
+        text-decoration: none;
+    }
+
     /* HEADER */
 
     .header {
@@ -48,6 +52,9 @@
         letter-spacing: 6px;
         font-size: 14px;
         cursor: pointer;
+    }
+    .menu ul a.link_anchor {
+        color: #FFF;
     }
     .menu ul li {
         list-style: none;
@@ -93,9 +100,6 @@
     .links a img {
         width: 20px;
     }
-
-
-
 
     .row {
         display: flex;
