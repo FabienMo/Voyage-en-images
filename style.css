@@ -427,7 +427,7 @@
 .fields {
     display: flex;
     flex-direction: column;
-    padding: 48px 0;
+    padding: 36px 0;
     border-top: 1px solid #FFF;
 }
 

@@ -195,32 +195,36 @@
 
     <h1>Contact</h1>
     <div class="centered">
-        <div class="row" style="width: 50vw;">
-
-            <form action="https://api.web3forms.com/submit" method="POST" id="form">
-                <!-- <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
-                <input type="hidden" name="subject" value="New Submission from Web3Forms" />
-                <input type="checkbox" name="botcheck" id="" style="display: none;" /> -->
-    
-                <div class="fields">
-                    <label for="name">Bonjour moi c’est</label>
-                    <input type="text" name="name" id="name" placeholder="Entre ton nom" required />
-                </div>
-                <div class="fields">
-                    <label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Pour me contacter, voici mon email</label>
-                    <input type="email" name="email" id="email" placeholder="exemple@email.com" required />
-                </div>
-                <div class="fields">
-                    <label for="message" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Je voulais échanger un peu</label>
-                    <textarea rows="5" name="message" id="message" placeholder="Dis moi tout !!" required></textarea>
-                </div>
-                <div class="button">
-                    <button type="submit">
-                        Envoyer
-                    </button>
-                </div>
-                <p id="result"></p>
-            </form>
+        <div class="row" style="width: 90vw; max-width: 1200px; margin-bottom: 150px;">
+            <div class="col" style="padding-right: 50px;">
+                <img src="assets/images/contact.png" alt="">
+            </div>
+            <div class="col">
+                <form action="https://api.web3forms.com/submit" method="POST" id="form">
+                    <!-- <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+                    <input type="hidden" name="subject" value="New Submission from Web3Forms" />
+                    <input type="checkbox" name="botcheck" id="" style="display: none;" /> -->
+        
+                    <div class="fields">
+                        <label for="name">Bonjour, moi c’est</label>
+                        <input type="text" name="name" id="name" placeholder="Entrez votre nom" required />
+                    </div> 
+                    <div class="fields">
+                        <label for="email" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Pour me contacter, voici mon email</label>
+                        <input type="email" name="email" id="email" placeholder="exemple@email.com" required />
+                    </div>
+                    <div class="fields">
+                        <label for="message" class="block mb-2 text-sm text-gray-600 dark:text-gray-400">Je voulais échanger un peu</label>
+                        <textarea rows="3" name="message" id="message" placeholder="Dites moi tout !!" required></textarea>
+                    </div>
+                    <div class="button">
+                        <button type="submit">
+                            Envoyer
+                        </button>
+                    </div>
+                    <p id="result"></p>
+                </form>
+            </div>
         </div>
     </div>
     </div>
