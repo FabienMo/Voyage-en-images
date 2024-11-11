@@ -32,6 +32,11 @@
         padding: 30px;
         z-index: 2;
         box-shadow: inset 0px 60px 70px -40px #00000078;
+        transition: box-shadow 0.3s ease-in-out;
+    }
+    .header.shadow {
+        box-shadow: inset 0px 105px 35px -40px #1e1e1e;
+        transition: box-shadow 0.3s ease-in-out;
     }
     .menu ul {
         display: flex;
@@ -359,6 +364,7 @@
         left: 0;
         border: 1px solid #fff;
         transform: translate(-50%, -50%);  
+        z-index: 2;
         /* mix-blend-mode: difference; */
       }
       
@@ -372,6 +378,7 @@
         left: 0;
         background-color: #fff;
         transform: translate(-50%, -50%);  
+        z-index: 2;
         /* mix-blend-mode: difference; */
       }
       

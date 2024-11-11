@@ -12,9 +12,10 @@ $("#portfolio").mixItUp({
   },
 });
 
-// PARALLAX INTRO
+// ON SCROLL
 
 $(document).on("scroll", function () {
+  // PARALLAX INTRO
   var top0 = $(document).scrollTop() / 4;
   $("#landscape0").css({ bottom: -top0 });
 
@@ -23,6 +24,18 @@ $(document).on("scroll", function () {
 
   var top3 = $(document).scrollTop() * 1;
   $("#landscape3").css({ bottom: -top3 });
+
+  // FADEIN FADEOUT
+  if (window.scrollY > 200) {
+    $(".scroll").fadeOut();
+  } else {
+    $(".scroll").fadeIn();
+  }
+  if (window.scrollY > 700) {
+    $(".header").addClass("shadow");
+  } else {
+    $(".header").removeClass("shadow");
+  }
 });
 
 // CONTACT FORM
