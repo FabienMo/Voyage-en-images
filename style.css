@@ -474,3 +474,39 @@
 img.link-video:hover {
     filter: brightness(0.7) contrast(1.2);
 }
+
+
+/* FOR MOBILE */
+
+@media (max-width: 850px) {
+    h1 {
+        font-size: 70px;
+        margin: 20px 0;
+    }
+    .menu, .links {
+        display: none;
+    }
+    #landscape3 {
+        background-size: 80vw;
+    }
+    .toolbar {
+        padding: 30px 0 10px;
+        margin-bottom: 30px;
+        overflow-x: scroll;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+      }
+    .row {
+        flex-direction: column;
+        max-width: 90vw;
+        margin: 10px 0;
+    }
+    .col {
+        width: 100%;
+    }
+    .row.reverse {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+}
