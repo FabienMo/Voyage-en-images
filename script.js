@@ -158,3 +158,90 @@ document.addEventListener("mousemove", function (event) {
 //   )
 //     return false;
 // };
+
+// PORTFOLIO MODAL
+const modal = document.querySelector(".modal");
+const modalContent = document.querySelector(".carousel-container");
+const closeBtn = document.querySelector(".close");
+const prevBtn = document.querySelector(".carousel-button.prev");
+const nextBtn = document.querySelector(".carousel-button.next");
+
+let currentImages = [];
+let currentIndex = 0;
+
+// Add click event to portfolio images
+$("#portfolio").on("click", ".tile", function (e) {
+  e.preventDefault();
+  e.stopPropagation();
+
+  // Vérifier si un filtre est actif
+  const activeFilter = $("#filters .filter.active").data("filter");
+  let tiles;
+
+  if (activeFilter === "all" || !activeFilter) {
+    // Si aucun filtre ou "all", prendre toutes les images
+    tiles = $("#portfolio .tile img");
+  } else {
+    // Sinon, prendre les images de la catégorie active
+    const category = $(this)
+      .attr("class")
+      .split(" ")
+      .find((cls) =>
+        ["namibia", "kenya", "south-africa", "norvege", "indonesie"].includes(
+          cls
+        )
+      );
+
+    if (!category) return;
+    tiles = $(`.${category} img`);
+  }
+
+  // Récupérer les images
+  currentImages = tiles
+    .map(function () {
+      return $(this).attr("data-full") || $(this).attr("src");
+    })
+    .get();
+
+  // Trouver l'index de l'image cliquée
+  const clickedImage = $(this).find("img")[0];
+  currentIndex = tiles.index(clickedImage);
+
+  // Mettre à jour et afficher le carousel
+  updateCarousel();
+  modal.style.display = "block";
+});
+
+function updateCarousel() {
+  modalContent.innerHTML = `<img src="${currentImages[currentIndex]}" alt="">`;
+}
+
+function nextImage() {
+  currentIndex = (currentIndex + 1) % currentImages.length;
+  updateCarousel();
+}
+
+function prevImage() {
+  currentIndex =
+    (currentIndex - 1 + currentImages.length) % currentImages.length;
+  updateCarousel();
+}
+
+// Event listeners
+closeBtn.addEventListener("click", () => (modal.style.display = "none"));
+nextBtn.addEventListener("click", nextImage);
+prevBtn.addEventListener("click", prevImage);
+
+// Close modal when clicking outside
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) modal.style.display = "none";
+});
+
+// Keyboard navigation
+document.addEventListener("keydown", (e) => {
+  if (modal.style.display === "block") {
+    if (e.key === "ArrowRight") nextImage();
+    if (e.key === "ArrowLeft") prevImage();
+    if (e.key === "Escape") modal.style.display = "none";
+  }
+});
