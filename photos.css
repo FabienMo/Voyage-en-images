@@ -147,9 +147,21 @@
         column-width: 50%;
     }
     .toolbar {
-        padding: 30px 0 10px;
+        display: flex;
+        justify-content: center;
+        padding: 30px 0 30px;
         margin-bottom: 30px;
         overflow-x: scroll;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .btn {
+        width: fit-content;
+        padding: .8rem 1rem;
+    }
+    .btn.active:after {
+        bottom: 0;
     }
 }
 
