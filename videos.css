@@ -1,9 +1,5 @@
 /* VIDEO */
 
-img.link-video:hover {
-    filter: brightness(0.7) contrast(1.2);
-}
-
 .centered {
     display: flex;
     flex-direction: column;
@@ -11,6 +7,51 @@ img.link-video:hover {
 }
 .description {
     padding: 30px 0 100px;
+}
+
+.link-video::before {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -50%);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 48px 48px;
+    background-image: url(assets/icons/play.svg);
+    transition-duration: 0.3s;
+    z-index: 100;
+}
+.link-video:hover::before {
+    background-size: 60px 60px;
+    background-image: url(assets/icons/play.svg);
+}
+
+.link-video {
+    position: relative;
+    overflow: hidden;
+    display: block;
+}
+
+.link-video::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -30px;
+    right: -30px;
+    height: 0%;
+    width: calc(100% + 60px);
+    border-top-left-radius: 200px 60px;
+    border-top-right-radius: 200px 60px;
+    background-color: #00000040;
+    transition: all .3s ease-out;
+    filter: blur(15px);
+}
+.link-video:hover::after {
+    height: 40%;
 }
 
 /* FOR DESKTOP */

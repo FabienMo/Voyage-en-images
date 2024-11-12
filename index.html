@@ -17,7 +17,6 @@
     <link rel="icon" type="image/png" href="assets/icons/favicon.png">
     <link href="https://fonts.googleapis.com/css2?family=Assistant&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
     <script src='https://cdn.jsdelivr.net/jquery.mixitup/latest/jquery.mixitup.min.js'></script>
 </head>
 
@@ -59,105 +58,98 @@
 
         <h1>Photos</h1>
         <div id="filters" class="toolbar mb2 mt2">
-            <h3 class="btn fil-cat filter active" data-filter="all">Tout</h3>
-            <button class="btn fil-cat filter" data-rel="kenya" data-filter=".kenya">Kenya</button>
-            <button class="btn fil-cat filter" data-rel="indonesie" data-filter=".indonesie">Indonesie</button> 
-            <button class="btn fil-cat filter" data-rel="namibie" data-filter=".namibia">Namibie</button>
-            <button class="btn fil-cat filter" data-rel="norvege" data-filter=".norvege">Norvege</button> 
-            <button class="btn fil-cat filter" data-rel="afrique_du_sud" data-filter=".south-africa">Afrique du sud</button>
+            <button class="btn fil-cat filter" id="south-africa" data-rel="south-africa" data-filter=".south-africa">Afrique du sud</button>
+            <button class="btn fil-cat filter active" data-rel="kenya" data-filter=".kenya">Kenya</button>
+            <button class="btn fil-cat filter" data-rel="indonesia" data-filter=".indonesia">Indonesie</button> 
+            <button class="btn fil-cat filter" data-rel="namibia" data-filter=".namibia">Namibie</button>
+            <button class="btn fil-cat filter" data-rel="norway" data-filter=".norway">Norvege</button> 
         </div> 
         
         <div id="portfolio">
-          <div class="tile scale-anm namibia">
-              <img src="assets/min-images/namibie-pano-2.png" data-full="assets/max-images/namibie-pano-2.png" alt="" />
-          </div>
-          <div class="tile scale-anm namibia" >
-              <img src="assets/min-images/namibia-landscape-2.png" data-full="assets/max-images/namibia-landscape-2.png" alt="" />
-          </div>
-          <div class="tile scale-anm namibia" >
-              <img src="assets/min-images/namibia-portrait-1.png" data-full="assets/max-images/namibia-portrait-1.png" alt="" />
-          </div>
-          <div class="tile scale-anm kenya" >
-              <img src="assets/min-images/kenya-landscape-1.png" data-full="assets/max-images/kenya-landscape-1.png" alt="" />
-          </div>
-          <div class="tile scale-anm south-africa" >
-              <img src="assets/min-images/south-africa-portrait-1.png" data-full="assets/max-images/south-africa-portrait-1.png" alt="" />
-          </div>
-          <div class="tile scale-anm namibia">
-              <img src="assets/min-images/namibie-pano-5.png" data-full="assets/max-images/namibie-pano-5.png" alt="" />
-          </div>
-          <div class="tile scale-anm kenya">
-              <img src="assets/min-images/kenya-portrait-1.png" data-full="assets/max-images/kenya-portrait-1.png" alt="" />
-          </div>
-          <div class="tile scale-anm namibia" >
-              <img src="assets/min-images/namibie-pano-6.png" data-full="assets/max-images/namibie-pano-6.png" alt="" />
-          </div>
-          <div class="tile scale-anm kenya" >
-              <img src="assets/min-images/kenya-portrait-7.png" data-full="assets/max-images/kenya-portrait-7.png" alt="" />
-          </div>
-          <div class="tile scale-anm kenya" style="margin-top: 55px;">
-              <img src="assets/min-images/kenya-portrait-6.png" data-full="assets/max-images/kenya-portrait-6.png" alt="" />
-          </div>
-          <div class="tile scale-anm namibia" >
-              <img src="assets/min-images/namibia-portrait-5.png" data-full="assets/max-images/namibia-portrait-5.png" alt="" />
-          </div>
-          <div class="tile scale-anm south-africa" >
-              <img src="assets/min-images/south-africa-landscape-2.png" data-full="assets/max-images/south-africa-landscape-2.png" alt="" />
-          </div>
-          <div class="tile scale-anm kenya" >
-              <img src="assets/min-images/kenya-portrait-3.png" data-full="assets/max-images/kenya-portrait-3.png" alt="" />
-          </div>
-          <div class="tile scale-anm namibia" >
-              <img src="assets/min-images/namibie-pano-1.png" data-full="assets/max-images/namibie-pano-1.png" alt="" />
-          </div>
-          <div class="tile scale-anm kenya" >
-              <img src="assets/min-images/kenya-portrait-5.png" data-full="assets/max-images/kenya-portrait-5.png" alt="" />
-          </div>
-          <div class="tile scale-anm namibia" >
-              <img src="assets/min-images/namibia-portrait-4.png" data-full="assets/max-images/namibia-portrait-4.png" alt="" />
-          </div>
-          <div class="tile scale-anm south-africa" >
-              <img src="assets/min-images/south-africa-landscape-1.png" data-full="assets/max-images/south-africa-landscape-1.png" alt="" />
-          </div>
-          <div class="tile scale-anm kenya" >
-              <img src="assets/min-images/kenya-portrait-8.png" data-full="assets/max-images/kenya-portrait-8.png" alt="" />
-          </div>
-          <div class="tile scale-anm namibia" >
-              <img src="assets/min-images/namibie-pano-4.png" data-full="assets/max-images/namibie-pano-4.png" alt="" />
-          </div>
-          <div class="tile scale-anm kenya" >
-              <img src="assets/min-images/kenya-portrait-4.png" data-full="assets/max-images/kenya-portrait-4.png" alt="" />
-          </div>
-          <div class="tile scale-anm namibia" >
-              <img src="assets/min-images/namibia-landscape-1.png" data-full="assets/max-images/namibia-landscape-1.png" alt="" />
-          </div>
-          <div class="tile scale-anm namibia" >
-              <img src="assets/min-images/namibia-portrait-2.png" data-full="assets/max-images/namibia-portrait-2.png" alt="" />
-          </div>
-          <div class="tile scale-anm kenya" >
-              <img src="assets/min-images/kenya-portrait-2.png" data-full="assets/max-images/kenya-portrait-2.png" alt="" />
-          </div>
-          <div class="tile scale-anm namibia"  style="margin-top: 55px;">
-              <img src="assets/min-images/namibia-portrait-3.png" data-full="assets/images/namibia-portrait-3.png" alt="" />
-          </div>
-          <div class="tile scale-anm namibia">
-              <img src="assets/min-images/namibie-pano-3.png" data-full="assets/images/namibie-pano-3" alt="" />
-          </div>
-          <div class="tile scale-anm south-africa" >
-              <img src="assets/min-images/south-africa-portrait-2.png" data-full="assets/max-images/south-africa-portrait-2.png" alt="" />
-          </div>
-          <div class="tile scale-anm kenya" >
-              <img src="assets/min-images/kenya-pano-1.png" data-full="assets/max-images/kenya-pano-1.png" alt="" />
-          </div>
-          <div class="tile scale-anm south-africa" >
-              <img src="assets/min-images/south-africa-portrait-3.png" data-full="assets/max-images/south-africa-portrait-3.png" alt="" />
-          </div>
-          <div class="tile scale-anm namibia" >
-              <img src="assets/min-images/namibia-landscape-3.png" data-full="assets/max-images/namibia-landscape-3.png" alt="" />
-          </div>
-          <div class="tile scale-anm kenya" >
-              <img src="assets/min-images/kenya-portrait-9.png" data-full="assets/max-images/kenya-portrait-9.png" alt="" />
-          </div>
+            <div class="tile scale-anm indonesia"><img src="assets/min-images/indonesia-landscape-1.png" data-full="assets/max-images/indonesia-landscape-1.png" alt="" /></div>
+            <div class="tile scale-anm indonesia"><img src="assets/min-images/indonesia-landscape-2.png" data-full="assets/max-images/indonesia-landscape-2.png" alt="" /></div>
+            <div class="tile scale-anm indonesia"><img src="assets/min-images/indonesia-landscape-3.png" data-full="assets/max-images/indonesia-landscape-3.png" alt="" /></div>
+            <div class="tile scale-anm indonesia"><img src="assets/min-images/indonesia-landscape-4.png" data-full="assets/max-images/indonesia-landscape-4.png" alt="" /></div>
+            <div class="tile scale-anm indonesia"><img src="assets/min-images/indonesia-portrait-1.png" data-full="assets/max-images/indonesia-portrait-1.png" alt="" /></div>
+            <div class="tile scale-anm indonesia"><img src="assets/min-images/indonesia-portrait-2.png" data-full="assets/max-images/indonesia-portrait-2.png" alt="" /></div>
+            <div class="tile scale-anm indonesia"><img src="assets/min-images/indonesia-portrait-3.png" data-full="assets/max-images/indonesia-portrait-3.png" alt="" /></div>
+            <div class="tile scale-anm indonesia"><img src="assets/min-images/indonesia-portrait-4.png" data-full="assets/max-images/indonesia-portrait-4.png" alt="" /></div>
+            <div class="tile scale-anm indonesia"><img src="assets/min-images/indonesia-square-1.png" data-full="assets/max-images/indonesia-square-1.jpeg" alt="" /></div>
+            <div class="tile scale-anm indonesia"><img src="assets/min-images/indonesia-square-2.png" data-full="assets/max-images/indonesia-square-2.jpeg" alt="" /></div>
+            <div class="tile scale-anm indonesia"><img src="assets/min-images/indonesia-square-3.png" data-full="assets/max-images/indonesia-square-3.jpeg" alt="" /></div>
+            <div class="tile scale-anm kenya"><img src="assets/min-images/kenya-landscape-1.png" data-full="assets/max-images/kenya-landscape-1.png" alt="" /></div>
+            <div class="tile scale-anm kenya"><img src="assets/min-images/kenya-landscape-2.png" data-full="assets/max-images/kenya-landscape-2.png" alt="" /></div>
+            <div class="tile scale-anm kenya"><img src="assets/min-images/kenya-landscape-3.png" data-full="assets/max-images/kenya-landscape-3.png" alt="" /></div>
+            <div class="tile scale-anm kenya"><img src="assets/min-images/kenya-landscape-4.png" data-full="assets/max-images/kenya-landscape-4.png" alt="" /></div>
+            <div class="tile scale-anm kenya"><img src="assets/min-images/kenya-landscape-5.png" data-full="assets/max-images/kenya-landscape-5.png" alt="" /></div>
+            <div class="tile scale-anm kenya"><img src="assets/min-images/kenya-landscape-6.png" data-full="assets/max-images/kenya-landscape-6.png" alt="" /></div>
+            <div class="tile scale-anm kenya"><img src="assets/min-images/kenya-landscape-7.png" data-full="assets/max-images/kenya-landscape-7.png" alt="" /></div>
+            <div class="tile scale-anm kenya"><img src="assets/min-images/kenya-landscape-8.png" data-full="assets/max-images/kenya-landscape-8.png" alt="" /></div>
+            <div class="tile scale-anm kenya"><img src="assets/min-images/kenya-pano-1.png" data-full="assets/max-images/kenya-pano-1.png" alt="" /></div>
+            <div class="tile scale-anm kenya"><img src="assets/min-images/kenya-pano-2.png" data-full="assets/max-images/kenya-pano-2.png" alt="" /></div>
+            <div class="tile scale-anm kenya"><img src="assets/min-images/kenya-portrait-1.png" data-full="assets/max-images/kenya-portrait-1.png" alt="" /></div>
+            <div class="tile scale-anm kenya"><img src="assets/min-images/kenya-portrait-2.png" data-full="assets/max-images/kenya-portrait-2.png" alt="" /></div>
+            <div class="tile scale-anm kenya"><img src="assets/min-images/kenya-portrait-3.png" data-full="assets/max-images/kenya-portrait-3.png" alt="" /></div>
+            <div class="tile scale-anm kenya"><img src="assets/min-images/kenya-portrait-4.png" data-full="assets/max-images/kenya-portrait-4.png" alt="" /></div>
+            <div class="tile scale-anm kenya"><img src="assets/min-images/kenya-portrait-5.png" data-full="assets/max-images/kenya-portrait-5.png" alt="" /></div>
+            <div class="tile scale-anm kenya"><img src="assets/min-images/kenya-portrait-6.png" data-full="assets/max-images/kenya-portrait-6.png" alt="" /></div>
+            <div class="tile scale-anm kenya"><img src="assets/min-images/kenya-portrait-7.png" data-full="assets/max-images/kenya-portrait-7.png" alt="" /></div>
+            <div class="tile scale-anm kenya"><img src="assets/min-images/kenya-portrait-8.png" data-full="assets/max-images/kenya-portrait-8.png" alt="" /></div>
+            <div class="tile scale-anm kenya"><img src="assets/min-images/kenya-portrait-9.png" data-full="assets/max-images/kenya-portrait-9.png" alt="" /></div>
+            <div class="tile scale-anm kenya"><img src="assets/min-images/kenya-portrait-10.png" data-full="assets/max-images/kenya-portrait-10.png" alt="" /></div>
+            <div class="tile scale-anm kenya"><img src="assets/min-images/kenya-portrait-11.png" data-full="assets/max-images/kenya-portrait-11.png" alt="" /></div>
+            <div class="tile scale-anm kenya"><img src="assets/min-images/kenya-portrait-12.png" data-full="assets/max-images/kenya-portrait-12.png" alt="" /></div>
+            <div class="tile scale-anm namibia" ><img src="assets/min-images/namibia-landscape-1.png" data-full="assets/max-images/namibia-landscape-1.png" alt="" /></div>
+            <div class="tile scale-anm namibia" ><img src="assets/min-images/namibia-landscape-2.png" data-full="assets/max-images/namibia-landscape-2.png" alt="" /></div>
+            <div class="tile scale-anm namibia" ><img src="assets/min-images/namibia-landscape-3.png" data-full="assets/max-images/namibia-landscape-3.png" alt="" /></div>
+            <div class="tile scale-anm namibia" ><img src="assets/min-images/namibia-landscape-4.png" data-full="assets/max-images/namibia-landscape-4.png" alt="" /></div>
+            <div class="tile scale-anm namibia" ><img src="assets/min-images/namibia-landscape-5.png" data-full="assets/max-images/namibia-landscape-5.png" alt="" /></div>
+            <div class="tile scale-anm namibia" ><img src="assets/min-images/namibia-landscape-6.png" data-full="assets/max-images/namibia-landscape-6.png" alt="" /></div>
+            <div class="tile scale-anm namibia" ><img src="assets/min-images/namibia-landscape-7.png" data-full="assets/max-images/namibia-landscape-7.png" alt="" /></div>
+            <div class="tile scale-anm namibia"><img src="assets/min-images/namibia-pano-1.png" data-full="assets/max-images/namibia-pano-1.png" alt="" /></div>
+            <div class="tile scale-anm namibia"><img src="assets/min-images/namibia-pano-2.png" data-full="assets/max-images/namibia-pano-2.png" alt="" /></div>
+            <div class="tile scale-anm namibia"><img src="assets/min-images/namibia-pano-3.png" data-full="assets/max-images/namibia-pano-3.png" alt="" /></div>
+            <div class="tile scale-anm namibia"><img src="assets/min-images/namibia-pano-4.png" data-full="assets/max-images/namibia-pano-4.png" alt="" /></div>
+            <div class="tile scale-anm namibia"><img src="assets/min-images/namibia-pano-5.png" data-full="assets/max-images/namibia-pano-5.png" alt="" /></div>
+            <div class="tile scale-anm namibia"><img src="assets/min-images/namibia-pano-6.png" data-full="assets/max-images/namibia-pano-6.png" alt="" /></div>
+            <div class="tile scale-anm namibia"><img src="assets/min-images/namibia-pano-8.png" data-full="assets/max-images/namibia-pano-8.png" alt="" /></div>
+            <div class="tile scale-anm namibia"><img src="assets/min-images/namibia-portrait-1.png" data-full="assets/max-images/namibia-portrait-1.png" alt="" /></div>
+            <div class="tile scale-anm namibia"><img src="assets/min-images/namibia-portrait-2.png" data-full="assets/max-images/namibia-portrait-2.png" alt="" /></div>
+            <div class="tile scale-anm namibia"><img src="assets/min-images/namibia-portrait-3.png" data-full="assets/max-images/namibia-portrait-3.png" alt="" /></div>
+            <div class="tile scale-anm namibia"><img src="assets/min-images/namibia-portrait-4.png" data-full="assets/max-images/namibia-portrait-4.png" alt="" /></div>
+            <div class="tile scale-anm namibia"><img src="assets/min-images/namibia-portrait-5.png" data-full="assets/max-images/namibia-portrait-5.png" alt="" /></div>
+            <div class="tile scale-anm norway"><img src="assets/min-images/norway-landscape-1.png" data-full="assets/max-images/norway-landscape-1.png" alt="" /></div>
+            <div class="tile scale-anm norway"><img src="assets/min-images/norway-landscape-2.png" data-full="assets/max-images/norway-landscape-2.png" alt="" /></div>
+            <div class="tile scale-anm norway"><img src="assets/min-images/norway-landscape-3.png" data-full="assets/max-images/norway-landscape-3.png" alt="" /></div>
+            <div class="tile scale-anm norway"><img src="assets/min-images/norway-landscape-4.png" data-full="assets/max-images/norway-landscape-4.png" alt="" /></div>
+            <div class="tile scale-anm norway"><img src="assets/min-images/norway-landscape-5.png" data-full="assets/max-images/norway-landscape-5.png" alt="" /></div>
+            <div class="tile scale-anm norway"><img src="assets/min-images/norway-landscape-6.png" data-full="assets/max-images/norway-landscape-6.png" alt="" /></div>
+            <div class="tile scale-anm norway"><img src="assets/min-images/norway-landscape-7.png" data-full="assets/max-images/norway-landscape-7.png" alt="" /></div>
+            <div class="tile scale-anm norway"><img src="assets/min-images/norway-pano-1.png" data-full="assets/max-images/norway-pano-1.png" alt="" /></div>
+            <div class="tile scale-anm norway"><img src="assets/min-images/norway-pano-2.png" data-full="assets/max-images/norway-pano-2.png" alt="" /></div>
+            <div class="tile scale-anm norway"><img src="assets/min-images/norway-portrait-1.png" data-full="assets/max-images/norway-portrait-1.png" alt="" /></div>
+            <div class="tile scale-anm norway"><img src="assets/min-images/norway-portrait-2.png" data-full="assets/max-images/norway-portrait-2.png" alt="" /></div>
+            <div class="tile scale-anm norway"><img src="assets/min-images/norway-square-1.png" data-full="assets/max-images/norway-square-1.png" alt="" /></div>
+            <div class="tile scale-anm south-africa"><img src="assets/min-images/south-africa-landscape-1.png" data-full="assets/max-images/south-africa-landscape-1.png" alt="" /></div>
+            <div class="tile scale-anm south-africa"><img src="assets/min-images/south-africa-landscape-2.png" data-full="assets/max-images/south-africa-landscape-2.png" alt="" /></div>
+            <div class="tile scale-anm south-africa"><img src="assets/min-images/south-africa-landscape-3.png" data-full="assets/max-images/south-africa-landscape-3.png" alt="" /></div>
+            <div class="tile scale-anm south-africa"><img src="assets/min-images/south-africa-landscape-4.png" data-full="assets/max-images/south-africa-landscape-4.png" alt="" /></div>
+            <div class="tile scale-anm south-africa"><img src="assets/min-images/south-africa-landscape-5.png" data-full="assets/max-images/south-africa-landscape-5.png" alt="" /></div>
+            <div class="tile scale-anm south-africa"><img src="assets/min-images/south-africa-landscape-6.png" data-full="assets/max-images/south-africa-landscape-6.png" alt="" /></div>
+            <div class="tile scale-anm south-africa"><img src="assets/min-images/south-africa-landscape-7.png" data-full="assets/max-images/south-africa-landscape-7.png" alt="" /></div>
+            <div class="tile scale-anm south-africa"><img src="assets/min-images/south-africa-landscape-8.png" data-full="assets/max-images/south-africa-landscape-8.png" alt="" /></div>
+            <div class="tile scale-anm south-africa"><img src="assets/min-images/south-africa-landscape-9.png" data-full="assets/max-images/south-africa-landscape-9.png" alt="" /></div>
+            <div class="tile scale-anm south-africa"><img src="assets/min-images/south-africa-landscape-10.png" data-full="assets/max-images/south-africa-landscape-10.png" alt="" /></div>
+            <div class="tile scale-anm south-africa"><img src="assets/min-images/south-africa-landscape-11.png" data-full="assets/max-images/south-africa-landscape-11.png" alt="" /></div>
+            <div class="tile scale-anm south-africa"><img src="assets/min-images/south-africa-landscape-12.png" data-full="assets/max-images/south-africa-landscape-12.png" alt="" /></div>
+            <div class="tile scale-anm south-africa"><img src="assets/min-images/south-africa-portrait-1.png" data-full="assets/max-images/south-africa-portrait-1.png" alt="" /></div>
+            <div class="tile scale-anm south-africa"><img src="assets/min-images/south-africa-portrait-2.png" data-full="assets/max-images/south-africa-portrait-2.png" alt="" /></div>
+            <div class="tile scale-anm south-africa"><img src="assets/min-images/south-africa-portrait-3.png" data-full="assets/max-images/south-africa-portrait-3.png" alt="" /></div>
+            <div class="tile scale-anm south-africa"><img src="assets/min-images/south-africa-portrait-4.png" data-full="assets/max-images/south-africa-portrait-4.png" alt="" /></div>
+            <div class="tile scale-anm south-africa"><img src="assets/min-images/south-africa-portrait-5.png" data-full="assets/max-images/south-africa-portrait-5.png" alt="" /></div>
+            <div class="tile scale-anm south-africa"><img src="assets/min-images/south-africa-portrait-9.png" data-full="assets/max-images/south-africa-portrait-9.png" alt="" /></div>
+            <div class="tile scale-anm south-africa"><img src="assets/min-images/south-africa-portrait-10.png" data-full="assets/max-images/south-africa-portrait-10.png" alt="" /></div>
+            <div class="tile scale-anm south-africa"><img src="assets/min-images/south-africa-portrait-11.png" data-full="assets/max-images/south-africa-portrait-11.png" alt="" /></div>
         </div>
 
         <div id="videos"></div>
@@ -167,7 +159,9 @@
             <!-- <img src="assets/test.png" style="width: 70vw"> -->
             <div class="row">
                 <div class="col col-video">
-                    <a href="https://youtu.be/AWIxg6xGEUw?si=RlbpfB4X3OrT2Xz6" target="_blank"><img class="link-video" src="assets/images/video-norway.png" alt=""></a>
+                    <a href="https://youtu.be/AWIxg6xGEUw?si=RlbpfB4X3OrT2Xz6" class="link-video" target="_blank">
+                        <img src="assets/images/video-norway.png" alt="">
+                    </a>
                 </div>
                 <div class="col">
                     <h2>La Norvège vue du ciel</h2>
@@ -180,12 +174,18 @@
                     <p>Partez à l'aventure en Afrique du Sud avec un Self Drive Safari : liberté totale pour explorer la faune sauvage à votre rythme !!</p>
                 </div>
                 <div class="col col-video">
-                    <a href="https://youtu.be/1zZWpqvgMg4?si=JX5rmuyw2i3w-nbM" target="_blank"><img class="link-video" src="assets/images/video-south-africa.png" alt=""></a>
+                    <div class="link-video">
+                        <a href="https://youtu.be/1zZWpqvgMg4?si=JX5rmuyw2i3w-nbM" target="_blank">
+                            <img src="assets/images/video-south-africa.png" alt="">
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="row">
                 <div class="col col-video">
-                    <a href="https://youtu.be/iDIbrgYPLm0?si=g-XbJIRuly3p9bEV" target="_blank"><img class="link-video" src="assets/images/video-namibia.png" alt=""></a>
+                    <a href="https://youtu.be/iDIbrgYPLm0?si=g-XbJIRuly3p9bEV" class="link-video" target="_blank">
+                        <img src="assets/images/video-namibia.png" alt="">
+                    </a>
                 </div>
                 <div class="col">
                     <h2>Roadtrip en Namibie</h2>
@@ -198,7 +198,9 @@
                     <p>Pour ceux qui projetteraient de s'offrir des vacances en Afrique pour faire un Safari, le Kenya est l'un des plus beaux pays pour cela.</p>
                 </div>
                 <div class="col col-video">
-                    <a href="https://youtu.be/fbcgYHYka0o?si=pbawCaj7qx5doLzE" target="_blank"><img class="link-video" src="assets/images/video-kenya.png" alt=""></a>
+                    <a href="https://youtu.be/fbcgYHYka0o?si=pbawCaj7qx5doLzE" class="link-video" target="_blank">
+                        <img class="link-video" src="assets/images/video-kenya.png" alt="">
+                    </a>
                 </div>
             </div>
     </div>
@@ -245,12 +247,12 @@
     <div style="clear:both;"></div>
 
     <div class="modal">
-      <span class="close">&times;</span>
+      <span class="close"></span>
       <div class="modal-content">
           <div class="carousel">
-              <button class="carousel-button prev">&lt;</button>
+              <button class="carousel-button prev"></button>
               <div class="carousel-container"></div>
-              <button class="carousel-button next">&gt;</button>
+              <button class="carousel-button next"></button>
           </div>
       </div>
     </div>

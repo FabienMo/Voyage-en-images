@@ -10,6 +10,31 @@ $("a.link_anchor").click(function () {
   return false;
 });
 
+// ALBUM ON LOAD
+
+function shuffle(array) {
+  var currentIndex = array.length,
+    temporaryValue,
+    randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
+var categories = shuffle($("#portfolio>div").get());
+$("#portfolio").html(categories);
+
 // ALBUM
 
 $("#portfolio").mixItUp({
@@ -22,7 +47,21 @@ $("#portfolio").mixItUp({
     animateResizeContainer: false,
     effects: "fade scale",
   },
+  load: {
+    filter: "south-africa",
+    sort: "south-africa",
+  },
 });
+
+const button = document.getElementById("south-africa");
+function autoClick() {
+  button.click();
+}
+
+button.addEventListener("click", function () {
+  console.log("Button was clicked automatically!");
+});
+setTimeout(autoClick, 100);
 
 // ON SCROLL
 
@@ -187,7 +226,7 @@ $("#portfolio").on("click", ".tile", function (e) {
       .attr("class")
       .split(" ")
       .find((cls) =>
-        ["namibia", "kenya", "south-africa", "norvege", "indonesie"].includes(
+        ["namibia", "kenya", "south-africa", "norway", "indonesia"].includes(
           cls
         )
       );
