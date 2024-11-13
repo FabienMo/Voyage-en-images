@@ -65,29 +65,36 @@ setTimeout(autoClick, 100);
 
 // ON SCROLL
 
-$(document).on("scroll", function () {
-  // PARALLAX INTRO
-  var top0 = $(document).scrollTop() / 4;
-  $("#landscape0").css({ bottom: -top0 });
+var isMobile =
+  /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+    navigator.userAgent
+  );
 
-  var top2 = $(document).scrollTop() / 8;
-  $("#landscape2").css({ bottom: -top2 });
+if (!isMobile) {
+  $(document).on("scroll", function () {
+    // PARALLAX INTRO
+    var top0 = $(document).scrollTop() / 4;
+    $("#landscape0").css({ bottom: -top0 });
 
-  var top3 = $(document).scrollTop() * 1;
-  $("#landscape3").css({ bottom: -top3 });
+    var top2 = $(document).scrollTop() / 8;
+    $("#landscape2").css({ bottom: -top2 });
 
-  // FADEIN FADEOUT
-  if (window.scrollY > 200) {
-    $(".scroll").fadeOut();
-  } else {
-    $(".scroll").fadeIn();
-  }
-  if (window.scrollY > 700) {
-    $(".header").addClass("shadow");
-  } else {
-    $(".header").removeClass("shadow");
-  }
-});
+    var top3 = $(document).scrollTop() * 1;
+    $("#landscape3").css({ bottom: -top3 });
+
+    // FADEIN FADEOUT
+    if (window.scrollY > 200) {
+      $(".scroll").fadeOut();
+    } else {
+      $(".scroll").fadeIn();
+    }
+    if (window.scrollY > 700) {
+      $(".header").addClass("shadow");
+    } else {
+      $(".header").removeClass("shadow");
+    }
+  });
+}
 
 // CONTACT FORM
 

@@ -271,6 +271,9 @@
     #landscape3 {
         background-size: 160vw;
     }
+    .hideForMobile {
+        display: none;
+    }
     .row {
         flex-direction: column;
         max-width: 100vw;
