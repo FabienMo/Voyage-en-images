@@ -146,44 +146,46 @@ form.addEventListener("submit", function (e) {
 
 // MOUSE SMOOTH MOVEMENT
 
-const ball = document.querySelector("div.ball");
-const ball2 = document.querySelector("div.ball2");
+if (!isMobile) {
+  const ball = document.querySelector("div.ball");
+  const ball2 = document.querySelector("div.ball2");
 
-let mouseX = 0;
-let mouseY = 0;
+  let mouseX = 0;
+  let mouseY = 0;
 
-let ballX = 0;
-let ballY = 0;
-let ballX2 = 0;
-let ballY2 = 0;
+  let ballX = 0;
+  let ballY = 0;
+  let ballX2 = 0;
+  let ballY2 = 0;
 
-let speed = 0.1;
-let speed2 = 0.15;
+  let speed = 0.1;
+  let speed2 = 0.15;
 
-function animate() {
-  let distX = mouseX - ballX;
-  let distY = mouseY - ballY;
-  let distX2 = mouseX - ballX2;
-  let distY2 = mouseY - ballY2;
+  function animate() {
+    let distX = mouseX - ballX;
+    let distY = mouseY - ballY;
+    let distX2 = mouseX - ballX2;
+    let distY2 = mouseY - ballY2;
 
-  ballX = ballX + distX * speed;
-  ballY = ballY + distY * speed;
-  ballX2 = ballX2 + distX2 * speed2;
-  ballY2 = ballY2 + distY2 * speed2;
+    ballX = ballX + distX * speed;
+    ballY = ballY + distY * speed;
+    ballX2 = ballX2 + distX2 * speed2;
+    ballY2 = ballY2 + distY2 * speed2;
 
-  ball.style.left = ballX + "px";
-  ball.style.top = ballY + "px";
-  ball2.style.left = ballX2 + "px";
-  ball2.style.top = ballY2 + "px";
+    ball.style.left = ballX + "px";
+    ball.style.top = ballY + "px";
+    ball2.style.left = ballX2 + "px";
+    ball2.style.top = ballY2 + "px";
 
-  requestAnimationFrame(animate);
+    requestAnimationFrame(animate);
+  }
+  animate();
+
+  document.addEventListener("mousemove", function (event) {
+    mouseX = event.pageX;
+    mouseY = event.pageY;
+  });
 }
-animate();
-
-document.addEventListener("mousemove", function (event) {
-  mouseX = event.pageX;
-  mouseY = event.pageY;
-});
 
 // FORBIDEN INSPECT
 
